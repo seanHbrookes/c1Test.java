@@ -1,0 +1,29 @@
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.Test;
+
+public class testGame2 {
+
+    private C1 board = new C1();
+
+    @Test
+    public void testSecondPlayerWins() {
+        board.m8(3);
+        board.m11(); //change to player 2
+        board.m8(2);
+        board.m11(); //change to player 1
+        board.m8(3);
+        board.m11(); //change to player 2
+        board.m8(2);
+        board.m11(); //change to player 1
+        board.m8(4);
+        board.m11(); //change to player 2
+        board.m8(2);
+        board.m11(); //change to player 1
+        board.m8(5);
+        board.m11(); //change to player 2
+        board.m8(2);
+        assertTrue(board.m10());
+        System.out.println("test number 2");
+    }
+}
